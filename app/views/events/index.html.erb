@@ -1,0 +1,22 @@
+<main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h2 class="display-3">Salut, et bienvenue!</h2>
+          <p>Ti jeu de mot Even After All, Event After All. T'as vu... Allez viens, des petits events sympas. Meilleurs qu'à Bordeaux.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Une belle équipe &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <% @events.each do |i| %>
+          <div class="col-md-4">
+            <h2><%= i.title %></h2>
+            <p><%= i.description %></p>
+            <p><a class="btn btn-secondary" href="#" role="button">En savoir plus &raquo;</a></p>
+          </div>
+          <% end %>
+        </div>

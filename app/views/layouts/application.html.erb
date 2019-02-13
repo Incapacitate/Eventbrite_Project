@@ -25,16 +25,16 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item">
-        <a class="nav-link" href=new_event_path>CRÉER UN EVENT</a>
+        <%= link_to "CRÉER UN EVENT", new_event_path, :class => "nav-link" %>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          COMPTE
+          MON COMPTE
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Voir mon profil</a>
-          <a class="dropdown-item" href="#">Se déconnecter</a>
+          <%= link_to "Voir mon profil", user_session_path, :class => "dropdown-item" %>
+          <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
         </div>
       </li>
       <% else %>
@@ -43,8 +43,8 @@
           S'INSCRIRE/SE CONNECTER
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Se connecter</a>
-          <a class="dropdown-item" href="#">S'inscrire</a>
+          <%= link_to "Se connecter", new_user_session_path, :class => "dropdown-item" %>
+          <%= link_to "S'inscrire", new_user_registration_path, :class => "dropdown-item" %>
         </div>
       </li>
       <% end %>
