@@ -23,12 +23,12 @@ end
 puts "Profil créé"
 
 10.times do
-Event.create!(start_date: Faker::Date.forward(23), duration: "60", user_id: rand(1..User.count), price: rand(6..666), location: Faker::Address.city, title: Faker::Address.community, description: Faker::ChuckNorris.fact)
+Event.create!(start_date: Faker::Date.forward(23), duration: "60", user_id: User.all.sample.id, price: rand(6..666), location: Faker::Address.city, title: Faker::Address.community, description: Faker::ChuckNorris.fact)
 end
 puts "Event créé"
 
 20.times do
-Attendance.create!(user_id: rand(1..User.count), event_id: rand(1..User.count))
+Attendance.create!(user_id: User.all.sample.id, event_id: Event.all.sample.id)
 
 end
 puts "Participation ok"
