@@ -9,10 +9,11 @@
         <div class="form-group">
           <%= text_field_tag 'title', @event.title, class: "form-control", placeholder: "Le nom de ton event" %>
           <%= text_area_tag 'start_date', @event.start_date, class: "form-control", placeholder: "La date de ton event" %>
-          <%= text_area_tag 'dutation', @event.duration, class: "form-control", placeholder: "La durée de ton event" %>
-          <%= text_area_tag 'location', @event.location, class: "form-control", placeholder: "Le lieu de ton event" %>
+          <%= date_field(:event, :start_date) %>
+          <%= text_area_tag 'duration', @event.duration, class: "form-control", placeholder: "La durée de ton event" %>
+          <%= text_field_tag 'location', @event.location, class: "form-control", placeholder: "Le lieu de ton event" %>
           <%= text_area_tag 'description', @event.description, class: "form-control", placeholder: "Kessissipasse?" %>
-          <%= text_area_tag 'price', @event.price, class: "form-control", placeholder: "Le prix de ton event" %>
+          <%= text_field_tag 'price', @event.price, class: "form-control", placeholder: "Le prix de ton event" %>
           <br /> <br />
 
           <%= submit_tag "Ajouter mon évènement", class: "btn btn-info" %>
