@@ -7,4 +7,9 @@ Description : <%= @event.description %><br>
 Tarif : <%= @event.price %><br>
 </div>
 
-<p><a class="btn btn-secondary" href="<%= new_charge_path %> " role="button">S'inscrire et passer à la caisse &raquo;</a></p>
+<% if user_signed_in? %> 
+<p><a class="btn btn-primary btn-lg" href="<%= new_charge_path %>" role="button">Participer et passer à la caisse &raquo;</a></p>   
+
+<% else %> 
+<p><a class="btn btn-primary btn-lg" href="<%= new_user_registration_path %>" role="button">S'inscrire &raquo;</a></p>   
+<% end %>
