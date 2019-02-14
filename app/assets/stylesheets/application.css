@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+#head {
+    background: #181015 url(https://www.sxsw.com/wp-content/uploads/2018/06/Judy-Won-2404-1440x810.jpg) no-repeat;
+    background-size: cover;
+    min-height: 520px;
+    text-align: center;
+    padding-top: 240px;
+    color: white;
+    font-family: "Open sans", Helvetica, Arial;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+	padding:3px; 
+	border:4px; 
+	margin-right: 18%;
+	margin-left: 18%;
+	background-color: orange;
+	box-shadow: 5px 10px;
+}
